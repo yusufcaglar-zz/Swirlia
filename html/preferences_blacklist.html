@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/preferences_blacklist_style.css" />
+</head>
+<body>
+    <!-- LOADER -->
+    <div class="loader"></div>
+
+    <!-- CONTAINER -->
+    <div id="container">
+        <p id="p">Engellediğiniz bir kullanıcı yok</p>
+
+        <section>
+            <h1 id="caption_profile">Profilden Engelliler:</h1>
+
+            <div id="searchbox_profile" class="searchbox">
+                <input id="searchbox_text_profile" class="searchbox_text" type="text" placeholder="kullanıcı adı">
+            </div>
+
+            <ul id="blacklist_profile"></ul>
+        </section>
+
+        <section>
+            <h1 id="caption_chat">Chatten Engelliler:</h1>
+
+            <div id="searchbox_chat" class="searchbox">
+                <input id="searchbox_text_chat" class="searchbox_text" type="text" placeholder="kullanıcı adı">
+            </div>
+
+            <ul id="blacklist_chat"></ul>
+        </section>
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/preferences_blacklist.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="chat_style.css" />
+</head>
+<body>
+    <!-- LOADER -->
+    <div class="loader"></div>
+
+    <!-- CONTAINER -->
+    <div id="container">
+        <div id="anonimity_div">
+            <h3 id="anonimity">Anonimlikten çıkmak için tıklayınız</h3>
+            <img class="sounds_enabled" src="images/sounds_enabled.png" style="position: absolute; right: 0px;" loading="lazy" alt="" />
+        </div>
+
+        <h5 id="blank_screen_"></h5>
+
+        <div class="tabs">
+            <div id="tabs_dummy">
+                <ul id="tabs_ul"></ul>
+            </div>
+            <label id="block_label">Engelle</label>
+            <img class="sounds_enabled" loading="lazy" alt="" />
+        </div>
+
+        <form class="message">
+            <textarea disabled="disabled" maxlength="1024" spellcheck="false" id="message_"></textarea>
+            <img src="images/edit_photo.png" disabled="disabled" id="photo_" loading="lazy" alt="" />
+            <input id="photo_clicked_" type="file" formenctype="multipart/form-data" accept=".jpg, .png, .jpeg" />
+        </form>
+
+        <div id="chat_bottom">
+            <div id="notify_">Yeni Mesaj</div>
+            <img id="typing_" src="images/typing_message.gif" loading="lazy" alt="" />
+        </div>
+
+        <div class="chat"></div>
+
+        <!-- View Image -->
+        <div class="image_form" id="image_form">
+            <img id="user_img" loading="lazy" alt="" />
+        </div>
+
+        <!--OVERLAY FOR SHADOWING-->
+        <div id="overlay"></div>
+
+        <!-- Report Form -->
+        <div class="report_form" id="report_form">
+            <img class="logo" src="images/report.png" loading="lazy" alt="" />
+
+            <p id="report_p" class="p" style="font-weight:600;">
+                Veri güvenliği politikamız nedeniyle maalesef üye olmadan bir kullanıcıyı şikayet edemezsiniz.
+                <br /><br /> Bu kullanıcıyı şikayet edebilmek için hesabınıza giriş yapın veya
+                ücretsiz bir <a href="https://swirlia.com/" target="_blank">hesap oluşturun</a>
+            </p>
+
+            <p id="category_p" class="p">Şikayet Kategorisi</p>
+            <div id="radio_div">
+                <ul id="report_ul">
+                    <li class="report_li">
+                        <label id="improper_img_label">Uygunsuz Fotoğraf</label>
+                        <input type="radio" name="reason" id="improper_img" />
+                    </li>
+                    <li class="report_li">
+                        <label id="improper_message_label">Uygunsuz Mesaj</label>
+                        <input type="radio" name="reason" id="improper_message" />
+                    </li>
+                    <li class="report_li">
+                        <label id="other_label">Diğer</label>
+                        <input type="radio" name="reason" id="other" />
+                    </li>
+                </ul>
+            </div>
+
+            <p id="extra_p" class="p">Ek Bilgi (zorunlu değildir)</p>
+            <textarea id="extra_textarea" maxlength="250" rows="3"></textarea>
+
+            <button id="send_report">Gönder</button>
+
+            <p id="error_p" class="p"></p>
+        </div>
+
+        <!-- Snackbar -->
+        <div id="snackbar">Şikayet bildiriminiz gönderildi..</div>
+
+        <!-- Audio -->
+        <audio id="start_conversation_sound" src="sounds/graceful.mp3"></audio>
+        <audio id="end_conversation_sound" src="sounds/gadjet-app-alert-2.mp3"></audio>
+        <audio id="message_sound" src="sounds/all-eyes-on-me.mp3"></audio>
+        <audio id="kick_alarming_sound" src="sounds/alarming.mp3"></audio>
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="chat.js"></script>
+    <script type="text/javascript" src="md5.min.js"></script>
+    <script type="text/javascript" src="browser-image-compression.js"></script>
+    <script type="text/javascript" src="soundmanager2.js"></script>
+</body>
+</html>

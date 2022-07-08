@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/header_style.css" />
+</head>
+<body>
+    <div id="logo_div">
+        <a id="logo_a" href="" target="_parent">
+            <img id="logo" src="images/swirlia.png" loading="lazy" alt="" />
+        </a>
+    </div>
+
+    <h3 id="header_h3">Giriş yap veya anonim olarak gezin!</h3>
+
+    <div class="right_not_signed_in" id="header_not_signed_in">
+        <label id="forgot">Şifrenizi mi unuttunuz?</label>
+
+        <div id="login_form" style="float: right">
+            <input id="login_username" type="text" placeholder="Kullanıcı adı veya E-mail" required />
+            <input id="login_password" type="password" placeholder="Şifre" required />
+            <button id="login_button">Giriş yap</button>
+            <div id="error_label"></div>
+        </div>
+      
+    </div>
+   
+    <div class="right_signed_in" id="header_signed_in">
+        <div style="flex: 1"></div>
+
+        <div class="menu_element" id="menu_profile">
+            <label id="profile_label">Profil</label>
+            <img id="profile_img" src="images/profile.png" loading="lazy" alt="" />
+        </div>
+
+        <div class="menu_element" style="display: none" id="menu_followings">
+            <label id="followings_label">Takip Edilenler</label>
+            <img id="followings_img" src="images/followings.png" loading="lazy" alt="" />
+        </div>
+
+        <div class="menu_element" id="menu_preferences">
+            <label id="preferences_label">Tercihler</label>
+            <img id="preferences_img" src="images/preferences.png" loading="lazy" alt="" />
+        </div>
+
+        <div class="menu_element" id="menu_exit">
+            <label id="exit_label">Çıkış Yap</label>
+            <img id="exit_img" src="images/exit.png" loading="lazy" alt="" />
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="js/soundmanager2.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/preferences_general_style.css" />
+</head>
+<body>
+    <!-- LOADER -->
+    <div class="loader"></div>
+
+    <!-- CONTAINER -->
+    <div id="container">
+        <div class="div">
+            <label class="switch">
+                <input type="checkbox" checked="checked" disabled="disabled" id="conversations_count">
+                <span class="slider round"></span>
+            </label>
+            <p>Konuşma sayım profilimde gözükebilir</p>
+        </div>
+
+        <div class="div">
+            <label class="switch">
+                <input type="checkbox" checked="checked" disabled="disabled" id="followers_count">
+                <span class="slider round"></span>
+            </label>
+            <p>Takipçi sayım profilimde gözükebilir</p>
+        </div>
+
+        <div class="div">
+            <label class="switch">
+                <input type="checkbox" checked="checked" disabled="disabled" id="register_date">
+                <span class="slider round"></span>
+            </label>
+            <p>Kayıt olma tarihim profilimde gözükebilir</p>
+        </div>
+
+        <div class="div">
+            <label class="switch">
+                <input type="checkbox" checked="checked" disabled="disabled" id="last_seen_date">
+                <span class="slider round"></span>
+            </label>
+            <p>Son görülme tarihim profilimde gözükebilir</p>
+        </div>
+
+        <div class="div">
+            <label class="switch">
+                <input type="checkbox" checked="checked" disabled="disabled" id="sounds_enabled">
+                <span class="slider round"></span>
+            </label>
+            <p>Sohbet bildirimleri varsayılan olarak açık olsun</p>
+        </div>
+
+        <div class="div">
+            <label class="switch">
+                <input type="checkbox" disabled="disabled" id="private_profile">
+                <span class="slider round"></span>
+            </label>
+            <p>Gizli hesap (profiliniz Swirl'de çıkmaz)</p>
+        </div>
+
+        <div class="div">
+            <label class="switch">
+                <input type="checkbox" disabled="disabled" id="registered_access">
+                <span class="slider round"></span>
+            </label>
+            <p>Sadece kayıtlı kullanıcılar profilinize erişebilir</p>
+        </div>
+
+        <div class="div">
+            <label class="switch">
+                <input type="checkbox" disabled="disabled" id="registered_message">
+                <span class="slider round"></span>
+            </label>
+            <p>Sadece kayıtlı kullanıcılar size mesaj gönderebilir</p>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script rel="stylesheet" type="text/javascript" src="js/preferences_general.js"></script>
+</body>
+</html>

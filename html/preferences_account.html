@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/preferences_account_style.css" />
+</head>
+<body>
+    <!-- LOADER -->
+    <div class="loader"></div>
+
+    <!-- CONTAINER -->
+    <div id="container">
+        <div style="display: block;">
+            <div class="form" id="emailVerified_form">
+                <label id="emailVerified_label" style="color: red;">E-mail'iniz onaylanmamış</label>
+                <button id="emailVerified_submit">TEKRAR ONAY LİNKİ GÖNDER</button>
+            </div>
+        </div>
+
+        <div style="display: block;">
+            <div class="form" id="email_form">
+                <label>E-mail'imi değiştirmek istiyorum</label>
+                <input id="email" type="email" placeholder="example@hotmail.com" readonly required />
+                <button id="email_submit">Gönder</button>
+                <p class="error" id="email_error"></p>
+            </div>
+        </div>
+
+        <div style="display: block;">
+            <div class="form" id="password_form">
+                <label>Şifremi değiştirmek istiyorum</label>
+                <div class="div">
+                    <p>Mevcut <br />şifre:</p>
+                    <input id="old_password" type="password" readonly required />
+                    <img id="old_password_show" src="images/visible.png" loading="lazy" alt="" />
+                </div>
+                <div class="div">
+                    <p>Yeni şifre:</p>
+                    <input id="new_password" type="password" readonly required />
+                    <img id="new_password_show" src="images/visible.png" loading="lazy" alt="" />
+                </div>
+                <div class="div">
+                    <p>Yeni şifre:<br />(tekrar)</p>
+                    <input id="new_password_again" type="password" readonly required />
+                    <img id="new_password_again_show" src="images/visible.png" loading="lazy" alt="" />
+                </div>
+                <button id="password_submit">Gönder</button>
+                <p class="error" id="password_error"></p>
+            </div>
+        </div>
+
+        <div style="display: block;">
+            <div class="form">
+                <label>Cinsiyet</label>
+                <div class="div">
+                    <p id="male_label" class="gender_label">Erkek</p>
+                    <input id="male" type="radio" disabled="disabled" name="gender" />
+                    <p id="female_label" class="gender_label">Kadın</p>
+                    <input id="female" type="radio" disabled="disabled" name="gender" />
+                    <p id="other_label" class="gender_label">Diğer</p>
+                    <input id="other" type="radio" disabled="disabled" name="gender" />
+                </div>
+            </div>
+        </div>
+
+        <div style="display: block;">
+            <div class="form" id="birthdate_form">
+                <label>Doğum tarihi</label>
+                <input id="birthdate" type="date" readonly required />
+                <button id="birthdate_submit" style="width: 35%;">Gönder</button>
+                <p class="error" id="birthdate_error"></p>
+            </div>
+        </div>
+
+        <div style="display: block;">
+            <div class="form">
+                <label id="deactivate">Hesabımı dondur</label>
+            </div>
+        </div>
+
+        <div style="display: block;">
+            <div class="form">
+                <label id="delete">Hesabımı sil</label>
+            </div>
+        </div>
+
+            <!-- Snackbar -->
+            <div id="snackbar"></div>
+        </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/preferences_account.js"></script>
+</body>
+</html>

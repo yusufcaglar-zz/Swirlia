@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="images/swirl.png" />
+    <link rel="stylesheet" href="css/profile_style.css" />
+    <title>Swirlia - Kaptır kendini!</title>
+</head>
+<body>
+    <!-- BACKGROUND -->
+    <div id="background"></div>
+
+    <!-- LOADER -->
+    <div class="loader"></div>
+
+    <!-- CONTAINER -->
+    <div id="container">
+        <!-- HEADER -->
+        <header class="header">
+            <iframe id="iframe_header" src="html/header.html" scrolling="no" allow="autoplay"></iframe>
+        </header>
+        
+        <!-- <nav></nav> -->
+
+        <!-- SECTION -->
+        <section>
+            <!-- User Div-->
+            <div class="user_div" id="user_div">
+                <div class="user_image_div" id="user_image_div">
+                    <img data-form-target="#image_form" id="user_image" loading="lazy" alt="" />
+                    <img data-form-target="#form" id="user_edit_image" src="images/edit_photo.png" loading="lazy" alt="" />
+                </div>
+
+                <div class="user_about_div">
+                    <div id="user_registerDate_div">
+                        <img id="online_status_img" loading="lazy" alt="" />
+                        <label id="online_status_label"></label>
+                        <label id="register_date"></label>
+                    </div>
+
+                    <div id="user_bio_div">
+                        <div id="dummy" class="area"></div>
+                        <textarea spellcheck="false" maxlength="500" class="area" id="bio" readonly></textarea>
+                    </div>
+
+                    <div id="user_username_div">
+                        <label id="username"></label>
+                        <img id="user_edit_bio" src="images/edit_bio.png" loading="lazy" alt="" />
+                    </div>
+
+                    <div id="user_stats_div">
+                        <div id="conversations_count">
+                            <label id="conversations"></label>
+                            <img src="images/conversations.png" loading="lazy" alt="" />
+                        </div>
+
+                        <div id="followers_count">
+                            <label id="followers"></label>
+                            <img src="images/followers.png" loading="lazy" alt="" />
+                        </div>
+
+                        <div id="follow">
+                            <label id="follow_label">Takip Et</label>
+                            <img id="follow_img" src="images/follow.png" loading="lazy" alt="" />
+                        </div>
+
+                        <div id="block">
+                            <label>Engelle</label>
+                            <img src="images/block.png" loading="lazy" alt="" />
+                        </div>
+
+                        <div id="report">
+                            <label>Şikayet Et</label>
+                            <img src="images/report.png" loading="lazy" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--CHAT-->
+        <div id="chat_div">
+            <iframe id="iframe_chat" src="html/chat_client.html" scrolling="no" allow="autoplay"></iframe>
+        </div>
+
+        <!--SWIRL-->
+        <iframe id="iframe_swirl" src="html/swirl.html" scrolling="no" allow="autoplay"></iframe>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <iframe id="iframe_footer" src="html/footer.html" scrolling="no"></iframe>
+        </footer>
+
+        <!-- Edit Image -->
+        <div class="form" id="form">
+            <div class="form_header">
+                <div class="title">Bir Fotoğraf seçiniz</div>
+                <button class="close_btn" data-close-button>&times;</button>
+            </div>
+
+            <div class="form_body">
+                <input id="user_img_change" type="file" formenctype="multipart/form-data" accept=".jpg, .png, .jpeg" />
+                <input id="user_img_submit" type="submit" value="Gönder" />
+                <input id="user_img_remove" type="submit" value="Fotoğrafımı kaldır" style="display: none" />
+                <h4 id="form_error"></h4>
+            </div>
+        </div>
+
+        <!-- View Image -->
+        <div class="image_form" id="image_form">
+            <img id="user_img" loading="lazy" alt="" />
+        </div>
+
+        <!-- Login Register Form -->
+        <div class="login_register_form portrait_form" id="login_register_form">
+            <img class="logo" src="images/follow.png" loading="lazy" alt="" />
+
+            <p class="p" style="font-weight:600;">
+                Bu kullanıcıyı takip edebilmek için hesabınıza giriş yapın veya
+                tamamen ücretsiz <a href="" target="_blank">hesap oluşturun</a>
+            </p>
+        </div>
+
+        <!-- Block Form -->
+        <div class="block_form portrait_form" id="block_form">
+            <img class="logo" src="images/block.png" loading="lazy" alt="" />
+
+            <p class="p">
+                Bu kullanıcıyı engellemek istediğinize emin misiniz?<br /><br />Eğer engellerseniz ikinizde
+                birbirinizin profiline ulaşamayacaksınız.<br /><br />Engelli listenizi yukarıdaki menüden
+                Tercihler'i tıkladıktan sonra açılan pencerede Kara Liste sekmesinde görebilirsiniz.
+            </p>
+
+            <div>
+                <button id="block_yes">Engelle</button>
+                <button id="block_no">Vazgeç</button>
+            </div>
+        </div>
+
+        <!-- Report Form -->
+        <div class="report_form portrait_form" id="report_form">
+            <img class="logo" src="images/report.png" loading="lazy" alt="" />
+
+            <p id="report_p" class="p" style="font-weight:600;">
+                Veri güvenliği politikamız nedeniyle maalesef üye olmadan bir kullanıcıyı şikayet edemezsiniz.
+                <br /><br /> Bu kullanıcıyı şikayet edebilmek için hesabınıza giriş yapın veya
+                ücretsiz bir <a href="" target="_blank">hesap oluşturun</a>
+            </p>
+
+            <p id="category_p" class="p">Şikayet Kategorisi</p>
+            <div id="radio_div">
+                <ul id="report_ul">
+                    <li class="report_li">
+                        <label id="improper_img_label">Uygunsuz Fotoğraf</label>
+                        <input type="radio" name="reason" id="improper_img" />
+                    </li>
+                    <li class="report_li">
+                        <label id="improper_bio_label">Uygunsuz Hakkında Yazısı</label>
+                        <input type="radio" name="reason" id="improper_bio" />
+                    </li>
+                    <li class="report_li">
+                        <label id="fake_acc_label">Sahte Hesap</label>
+                        <input type="radio" name="reason" id="fake_acc" />
+                    </li>
+                </ul>
+            </div>
+
+            <p id="extra_p" class="p">Ek Bilgi (zorunlu değildir)</p>
+            <textarea id="extra_textarea" maxlength="250" rows="3"></textarea>
+
+            <button id="send_report">Gönder</button>
+
+            <p id="error_p" class="p"></p>
+        </div>
+
+        <!-- Followings Form -->
+        <div class="followings_form portrait_form" id="followings_form">
+            <div id="followings_header">
+                <img id="followings_img" src="images/followings.png" loading="lazy" alt="" />
+                <div id="searchbox">
+                    <input id="searchbox_text" type="text" placeholder="kullanıcı adı">
+                </div>
+            </div>
+
+            <p id="followings_p">Takip edilenler listeniz boş.</p>
+        </div>
+
+        <!-- Preferences -->
+        <div class="preferences_form portrait_form" id="preferences_form">
+            <div id="preferences_header">
+                <button class="preferences_menu" id="preferences_general">Genel</button>
+                <button class="preferences_menu" id="preferences_account">Hesap</button>
+                <button class="preferences_menu" id="preferences_blacklist">Kara Liste</button>
+            </div>
+
+            <iframe id="preferences_iframe" src="html/chat_client.html"></iframe>
+        </div>
+
+        <!-- Support Form -->
+        <div class="support_form portrait_form" id="support_form">
+            <img class="logo" src="images/support.png" loading="lazy" alt="" />
+
+            <p class="p">Destek Kategorisi</p>
+            <select id="support_category">
+                <option value="account">Hesap</option>
+                <option value="website">Site Kullanımı</option>
+                <option value="chat">Sohbet Ekranı/Fonksiyonu</option>
+                <option value="complain">Şikayet</option>
+                <option value="suggestion">Öneri</option>
+                <option value="privacy_policy">Gizlilik Politikası ve Çerezler</option>
+                <option value="user_agreement">Kullanıcı Sözleşmesi</option>
+                <option value="license">Lisans</option>
+            </select>
+
+            <p class="p">Mesaj</p>
+            <textarea id="message_textarea" maxlength="250" rows="3"></textarea>
+
+            <button id="send_support">Gönder</button>
+
+            <p id="error_p_nd" class="p"></p>
+        </div>
+
+        <!--OVERLAY FOR SHADOWING-->
+        <div id="overlay"></div>
+
+        <!-- Audio -->
+        <audio id="preferences_opening_sound" src="sounds/wind-up-1.mp3"></audio>
+        <audio id="preferences_switching_sound" src="sounds/wind-up-5.mp3"></audio>
+        <audio id="preferences_closing_sound" src="sounds/wind-up-4.mp3"></audio>
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/profile.js"></script>
+    <script type="text/javascript" src="js/browser-image-compression.js"></script>
+    <script type="text/javascript" src="js/md5.min.js"></script>
+    <script type="text/javascript" src="js/soundmanager2.js"></script>
+</body>
+</html>
